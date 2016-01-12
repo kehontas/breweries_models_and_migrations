@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112011612) do
+ActiveRecord::Schema.define(version: 20160112021637) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160112011612) do
     t.string   "long_description"
     t.string   "style"
     t.integer  "brewer_id"
+    t.decimal  "ibu"
+    t.boolean  "seasonal"
   end
 
   add_index "beers", ["brewer_id"], name: "index_beers_on_brewer_id", using: :btree
